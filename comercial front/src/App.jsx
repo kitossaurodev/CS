@@ -1,16 +1,17 @@
 import { Routes, Route } from "react-router-dom";
-import MainLayout from "./components.layouts/MainLayout";
+import MainLayout from "./components.layouts/MainLayout"
 import Home from "./pages/Home";
 
-const App = () => {
+function App() {
   return (
-    <div className="text-center text-2xl text-blue-500">
-      <h1>O React está funcionando! 🎉</h1>
-    </div>
+    <Routes>
+      <Route path="/" element={<MainLayout />}>
+        <Route index element={<Home />} />
+      </Route>
+    </Routes>
   );
-};
+}
 
-export default App;
 
 
 
