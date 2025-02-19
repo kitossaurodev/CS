@@ -52,7 +52,7 @@ const Navbar = () => {
             className={`bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent hover:from-blue-300 hover:via-blue-400 hover:to-blue-500 transition text-lg font-medium pb-1 ${
               activeLink === item ? "border-b-2 border-blue-500" : ""
             }`}
-            onClick={() => setActiveLink(item)}
+            onClick={() => setActiveLink(item.toLowerCase())}
           >
             {item}
           </Link>
